@@ -45,14 +45,13 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-//take 1 parameter - call it anything but it's holding the place for the array you will pass in as your argument
+//takes 1 parameter - call it anything but it's holding the place for the array you will pass in as your argument
+//take a spread of the parameter [...___] in the return
 function copy(array){
-  //take a spread of the parameter [...___]
-  /*your code here*/
-}    
+  return [...originalFlavors];
+}
 
-
-
+console.log('task 1:', copy(originalFlavors))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -66,10 +65,16 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 // taking 1 parameter - holding the place for an array
-function is31Flavors(/*your code here*/){
-  /*your code here*/
-  // conditional inside of here - if it's true, return true else return false ** should be exactly 31 items
+// conditional inside of function - if it's true, return true else return false ** should be exactly 31 items
+function is31Flavors(array){
+  if(array.length === 31){
+    return true;
+  }else{
+    return false;
+  }
 }
+
+console.log('task 2:', is31Flavors(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -85,11 +90,15 @@ Use the addFlavor function below to do the following:
 */
 
 // 2 parameters - array, string (which is holding the place for the new flavor)
-function addFlavor(/*your code here*/){
- /*your code here*/
- //use unshift to add the new flavor to the beginning of the received array
- //return the array
+ // use unshift to add the new flavor to the beginning of the received array
+ // return the array
+function addFlavor(array, item){
+  return originalFlavors.unshift('Rainbow Sherbert');
 }
+
+console.log('task 3:', addFlavor(originalFlavors, 'Rainbow Sherbert'));
+//return originalFlavors.unshift();
+//console.log('task 3:', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -124,10 +133,11 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 // 2 parameters - array / number (holding the place for an index)
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(array, number){
   /*your code here*/
   //array[0]
 }
+// return array[number]
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
