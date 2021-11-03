@@ -48,7 +48,8 @@ Use the copy function below to do the following:
 //takes 1 parameter - call it anything but it's holding the place for the array you will pass in as your argument
 //take a spread of the parameter [...___] in the return
 function copy(array){
-  return [...originalFlavors];
+let copy = [...originalFlavors]
+  return array;
 }
 
 console.log('task 1:', copy(originalFlavors))
@@ -93,12 +94,11 @@ Use the addFlavor function below to do the following:
  // use unshift to add the new flavor to the beginning of the received array
  // return the array
 function addFlavor(array, item){
-  return originalFlavors.unshift('Rainbow Sherbert');
+  array.unshift(item);
+  return array;
 }
 
 console.log('task 3:', addFlavor(originalFlavors, 'Rainbow Sherbert'));
-//return originalFlavors.unshift();
-//console.log('task 3:', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -113,12 +113,14 @@ Use the removeLastFlavor function below to do the following:
 */
 
 // 1 parameter which will be a place holder for the array
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
- // use .pop() to remove the last item
- // return the array
+// use .pop() to remove the last item
+// return the array
+function removeLastFlavor(array){
+  array.pop();
+  return array;
 }
 
+console.log('task 4:', removeLastFlavor(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -133,11 +135,12 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 // 2 parameters - array / number (holding the place for an index)
-function getFlavorByIndex(array, number){
-  /*your code here*/
-  //array[0]
+// return array[number] --- array[0]
+function getFlavorByIndex(array, item){
+  return array[item];
 }
-// return array[number]
+
+console.log('task 5:', getFlavorByIndex(originalFlavors, 3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -154,14 +157,19 @@ Use the removeFlavorByName function below to do the following:
 
   HINT: You can use .splice() for this
 */
-
 // 2 parameters array and the string we want to remove
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
 // loop through the array and check every index for the exact match of the string, if it exists then remove it using splice --- .splice(start, how many items to delete)
+//outside of the loop return the array
+function removeFlavorByName(array, item){
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === item){
+      array.splice(i, 1);
+    }
+  }
+  return array;
 }
-//outisde of the loop return the array
 
+console.log('task 6:', removeFlavorByName(originalFlavors, 'Rocky Road'));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -216,8 +224,13 @@ Use the getAverageWordLength function below to do the following:
 */
 
 // uncomment below data and move it above the function
-function getAverageWordLength(/*code here*/){
-  /*code here*/
+function getAverageWordLength(array){
+  for(let i = 0; i < array.length; i++){
+  let wordCount = array[i];
+    while(i < 3){
+
+    }
+  }
 }
 
 
